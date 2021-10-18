@@ -125,6 +125,12 @@ struct PlaceholderView: View {
                 let post = posts[index]
                 viewContext.delete(post)
             }
+        do{
+            try viewContext.save()
+          
+        }catch let error as NSError {
+            print("Error", error.localizedDescription)
+        }
     }
 
 }
