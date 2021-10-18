@@ -12,7 +12,12 @@ struct PlaceholderView: View {
     @State private var favoriteColor = 0
     @State private var predicate: NSPredicate = NSPredicate(value: true)
     @Environment(\.managedObjectContext) private var viewContext
-
+    @FetchRequest(
+        entity: PostsEntity.entity(),
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \PostsEntity.id, ascending: true),
+        ]
+    ) var posts: FetchedResults<PostsEntity>
             
     var body: some View {
         NavigationView{
@@ -38,39 +43,42 @@ struct PlaceholderView: View {
                     sortDescriptors: [
                         NSSortDescriptor(key: "id", ascending: true)
                     ])
-                { (contactos: [PostsEntity]) in
-                    List(contactos){ post in
-                        ZStack{
-                            NavigationLink(destination: PostDetail(post: post)) {
-                                EmptyView()
-                            }
-                            Button(action: {
-                                updatePost(post: post)
-                                print("Floating Button Click")
-                            }, label: {
-                                VStack (alignment: .leading){
-                                    HStack{
-                                        if(!post.isRead){
-                                            Image(systemName: "circle.fill")
-                                                .foregroundColor(.blue)
-                                        }
-                                        if(post.isFavorite){
-                                            Image(systemName: "star.fill")
-                                                .foregroundColor(.yellow)
-                                        }
-                                        VStack{
-                                            Text(post.title!)
-                                                .font(.title3)
-                                                .bold()
-                                            Text(post.body!)
-                                                .font(.subheadline)
-                                        }
-                                    }
-                                    
-                                    
+                { (posts: [PostsEntity]) in
+                    List{
+                        ForEach(posts){ post in
+                            ZStack{
+                                NavigationLink(destination: PostDetail(post: post)) {
+                                    EmptyView()
                                 }
-                            })
-                        }
+                                Button(action: {
+                                    updatePost(post: post)
+                                    print("Floating Button Click")
+                                }, label: {
+                                    VStack (alignment: .leading){
+                                        HStack{
+                                            if(!post.isRead){
+                                                Image(systemName: "circle.fill")
+                                                    .foregroundColor(.blue)
+                                            }
+                                            if(post.isFavorite){
+                                                Image(systemName: "star.fill")
+                                                    .foregroundColor(.yellow)
+                                            }
+                                            VStack{
+                                                Text(post.title!)
+                                                    .font(.title3)
+                                                    .bold()
+                                                Text(post.body!)
+                                                    .font(.subheadline)
+                                            }
+                                        }
+                                        
+                                        
+                                    }
+                                })
+                            }
+                        }.onDelete(perform: self.deleteRow)
+                        
                     }.listStyle(.plain)
                         .navigationTitle("Posts")
                         .navigationBarTitleDisplayMode(.inline)
@@ -79,7 +87,7 @@ struct PlaceholderView: View {
                         }, label: {
                             Image(systemName: "arrow.clockwise.circle")
                         }))
-                    
+                        
                     Button(action: {
                         self.webService.deleteAll()
                         
@@ -112,7 +120,12 @@ struct PlaceholderView: View {
         }
     }
     
-    
+    func deleteRow(at indexSet: IndexSet){
+        for index in indexSet {
+                let post = posts[index]
+                viewContext.delete(post)
+            }
+    }
 
 }
 

@@ -179,4 +179,39 @@ class WebService: ObservableObject {
         }
     }
     
+    func delete(with id: Int16) {
+        let context = persistenceController.container.viewContext
+        
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult>
+        fetchRequest = NSFetchRequest(entityName: "PostsEntity")
+        fetchRequest.predicate = NSPredicate(format: "id == %d", id)
+        let deleteRequest = NSBatchDeleteRequest(
+            fetchRequest: fetchRequest
+        )
+        
+        deleteRequest.resultType = .resultTypeObjectIDs
+     
+        
+        do{
+            let batchDelete = try context.execute(deleteRequest)
+                as? NSBatchDeleteResult
+            
+            guard let deleteResult = batchDelete?.result
+                as? [NSManagedObjectID]
+                else { return }
+            
+            let deletedObjects: [AnyHashable: Any] = [
+                NSDeletedObjectsKey: deleteResult
+            ]
+            
+            NSManagedObjectContext.mergeChanges(
+                fromRemoteContextSave: deletedObjects,
+                into: [context]
+            )
+          
+            
+        }catch let error as NSError {
+            print("Error", error.localizedDescription)
+        }
+    }
 }
