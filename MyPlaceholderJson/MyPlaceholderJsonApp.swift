@@ -13,7 +13,9 @@ struct MyPlaceholderJsonApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            /*ContentView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)*/
+            PlaceholderView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

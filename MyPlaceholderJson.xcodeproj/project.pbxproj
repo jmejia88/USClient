@@ -16,6 +16,17 @@
 		FBC65BF8271B3AEE00227093 /* MyPlaceholderJsonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC65BF7271B3AEE00227093 /* MyPlaceholderJsonTests.swift */; };
 		FBC65C02271B3AEE00227093 /* MyPlaceholderJsonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC65C01271B3AEE00227093 /* MyPlaceholderJsonUITests.swift */; };
 		FBC65C04271B3AEE00227093 /* MyPlaceholderJsonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC65C03271B3AEE00227093 /* MyPlaceholderJsonUITestsLaunchTests.swift */; };
+		FBC65C11271B3EF200227093 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC65C10271B3EF200227093 /* PlaceholderView.swift */; };
+		FBC65C13271B430A00227093 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC65C12271B430A00227093 /* Posts.swift */; };
+		FBC65C15271B441E00227093 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC65C14271B441E00227093 /* WebService.swift */; };
+		FBC65C18271C0C2600227093 /* PostDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC65C17271C0C2600227093 /* PostDetail.swift */; };
+		FBC65C1C271C0D7E00227093 /* WebServiceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC65C1B271C0D7E00227093 /* WebServiceDetail.swift */; };
+		FBC65C1E271C0DC000227093 /* PostComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC65C1D271C0DC000227093 /* PostComments.swift */; };
+		FBC65C20271C169800227093 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC65C1F271C169800227093 /* UserModel.swift */; };
+		FBC65C22271C172B00227093 /* WebSErviceUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC65C21271C172B00227093 /* WebSErviceUser.swift */; };
+		FBC65C25271D405400227093 /* PostsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC65C23271D405400227093 /* PostsEntity+CoreDataClass.swift */; };
+		FBC65C26271D405400227093 /* PostsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC65C24271D405400227093 /* PostsEntity+CoreDataProperties.swift */; };
+		FBC65C28271D6E4D00227093 /* FetchedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC65C27271D6E4D00227093 /* FetchedObjects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +59,17 @@
 		FBC65BFD271B3AEE00227093 /* MyPlaceholderJsonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPlaceholderJsonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBC65C01271B3AEE00227093 /* MyPlaceholderJsonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceholderJsonUITests.swift; sourceTree = "<group>"; };
 		FBC65C03271B3AEE00227093 /* MyPlaceholderJsonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceholderJsonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FBC65C10271B3EF200227093 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		FBC65C12271B430A00227093 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		FBC65C14271B441E00227093 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		FBC65C17271C0C2600227093 /* PostDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetail.swift; sourceTree = "<group>"; };
+		FBC65C1B271C0D7E00227093 /* WebServiceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceDetail.swift; sourceTree = "<group>"; };
+		FBC65C1D271C0DC000227093 /* PostComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostComments.swift; sourceTree = "<group>"; };
+		FBC65C1F271C169800227093 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		FBC65C21271C172B00227093 /* WebSErviceUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSErviceUser.swift; sourceTree = "<group>"; };
+		FBC65C23271D405400227093 /* PostsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FBC65C24271D405400227093 /* PostsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FBC65C27271D6E4D00227093 /* FetchedObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedObjects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +100,8 @@
 		FBC65BD5271B3AED00227093 = {
 			isa = PBXGroup;
 			children = (
+				FBC65C23271D405400227093 /* PostsEntity+CoreDataClass.swift */,
+				FBC65C24271D405400227093 /* PostsEntity+CoreDataProperties.swift */,
 				FBC65BE0271B3AED00227093 /* MyPlaceholderJson */,
 				FBC65BF6271B3AEE00227093 /* MyPlaceholderJsonTests */,
 				FBC65C00271B3AEE00227093 /* MyPlaceholderJsonUITests */,
@@ -98,12 +122,15 @@
 		FBC65BE0271B3AED00227093 /* MyPlaceholderJson */ = {
 			isa = PBXGroup;
 			children = (
+				FBC65C1A271C0D3A00227093 /* Viewmodel */,
+				FBC65C19271C0D2C00227093 /* Model */,
+				FBC65C16271C092200227093 /* Views */,
 				FBC65BE1271B3AED00227093 /* MyPlaceholderJsonApp.swift */,
-				FBC65BE3271B3AED00227093 /* ContentView.swift */,
 				FBC65BE5271B3AEE00227093 /* Assets.xcassets */,
 				FBC65BEA271B3AEE00227093 /* Persistence.swift */,
 				FBC65BEC271B3AEE00227093 /* MyPlaceholderJson.xcdatamodeld */,
 				FBC65BE7271B3AEE00227093 /* Preview Content */,
+				FBC65C27271D6E4D00227093 /* FetchedObjects.swift */,
 			);
 			path = MyPlaceholderJson;
 			sourceTree = "<group>";
@@ -131,6 +158,36 @@
 				FBC65C03271B3AEE00227093 /* MyPlaceholderJsonUITestsLaunchTests.swift */,
 			);
 			path = MyPlaceholderJsonUITests;
+			sourceTree = "<group>";
+		};
+		FBC65C16271C092200227093 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FBC65C10271B3EF200227093 /* PlaceholderView.swift */,
+				FBC65C17271C0C2600227093 /* PostDetail.swift */,
+				FBC65BE3271B3AED00227093 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FBC65C19271C0D2C00227093 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FBC65C12271B430A00227093 /* Posts.swift */,
+				FBC65C1D271C0DC000227093 /* PostComments.swift */,
+				FBC65C1F271C169800227093 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FBC65C1A271C0D3A00227093 /* Viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				FBC65C14271B441E00227093 /* WebService.swift */,
+				FBC65C1B271C0D7E00227093 /* WebServiceDetail.swift */,
+				FBC65C21271C172B00227093 /* WebSErviceUser.swift */,
+			);
+			path = Viewmodel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,9 +321,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBC65BEB271B3AEE00227093 /* Persistence.swift in Sources */,
+				FBC65C25271D405400227093 /* PostsEntity+CoreDataClass.swift in Sources */,
+				FBC65C13271B430A00227093 /* Posts.swift in Sources */,
+				FBC65C1C271C0D7E00227093 /* WebServiceDetail.swift in Sources */,
+				FBC65C18271C0C2600227093 /* PostDetail.swift in Sources */,
+				FBC65C15271B441E00227093 /* WebService.swift in Sources */,
 				FBC65BEE271B3AEE00227093 /* MyPlaceholderJson.xcdatamodeld in Sources */,
 				FBC65BE4271B3AED00227093 /* ContentView.swift in Sources */,
+				FBC65C28271D6E4D00227093 /* FetchedObjects.swift in Sources */,
+				FBC65C1E271C0DC000227093 /* PostComments.swift in Sources */,
+				FBC65C11271B3EF200227093 /* PlaceholderView.swift in Sources */,
+				FBC65C22271C172B00227093 /* WebSErviceUser.swift in Sources */,
 				FBC65BE2271B3AED00227093 /* MyPlaceholderJsonApp.swift in Sources */,
+				FBC65C26271D405400227093 /* PostsEntity+CoreDataProperties.swift in Sources */,
+				FBC65C20271C169800227093 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
